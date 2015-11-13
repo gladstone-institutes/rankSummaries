@@ -11,12 +11,8 @@ library(devtools)
 
 
 
-install_github('pistacliffcho/rankSummaries/rankSummaries')	
-#grabs our package off gitHub
-#if we put the package on CRAN, 
-#the last 3 lines would be replaced with
-#install.packages('rankSummaries')	
-#all this only needs to be done once
+install_github('gladstone-institutes/rankSummaries/RCode/rankSummaries')	
+#grabs package off gitHub
 
 															
 library(rankSummaries)			
@@ -24,7 +20,6 @@ library(rankSummaries)
 
 data(MWM_data)					
 #loads our mice latency dataset, which is currently included in package.
-#We might not want to include the data?
 
 head(MWM_data)
 #Just giving you a snapshot of what the data looks like
@@ -60,5 +55,3 @@ summary(fit)
 
 # In addition, we can get information about our function by the following:
 ?rankAnalysis
-
-#the help file is very minimal at this point, as you can see
