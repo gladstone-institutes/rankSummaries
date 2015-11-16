@@ -30,4 +30,10 @@ There are many complications in the analysis Morris Water Maze data. This are
    of time to completion. 
   
   
-The original MWM methods paper suggesting using repeated measures ANOVA
+The original MWM methods paper suggesting using repeated measures ANOVA. While this does address the first issue,
+it does not address any of the others. Several alternatives have been suggested, such as linear mixed effects models,
+non-linear mixed effects models, and Cox-PH mixed effects models. While these methods are an improvement over the repeated measures ANOVA models, these methods address some, but not all of the issues. Worse yet, they require quite a bit of model diagnostics, which means these models may be difficult to use for biologists (and even a headache for statisticians). 
+
+As such, our motivation was to create simple, valid, robust statistical methods for Morris Water Maze Data analyses. 
+
+##What is a Rank Summary analysis?
