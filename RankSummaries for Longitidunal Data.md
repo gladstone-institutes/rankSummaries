@@ -43,4 +43,16 @@ question: does one group perform better than the other at this particular test? 
 interested in the actual values of the parameters that we may be estimating in the various other proposed 
 models. 
 
-With that in mind, we use a [derived variable analysis](https://faculty.washington.edu/heagerty/Courses/VA-longitudinal/private/LDAchapter.pdf) 
+With that in mind, we use a [derived variable analysis (section 1.3)](https://faculty.washington.edu/heagerty/Courses/VA-longitudinal/private/LDAchapter.pdf) to greatly simplify
+the analysis. This is real a simple data transformation, rather than a novel statistical method. For this data, at each 
+trial number, we replace the raw scores with the corresponding percentile rank. For example,
+
+    SubjectID  Trial1   Trial2   Trial1_rs   Trial2_rs
+    1          35.1     29.6     0.333       0.333
+    2          60       45.5     0.833       1.0
+    3          60       32.9     0.833       0.666
+
+In the example above, `TrialX` is the `Xth` raw trial score, while `TrialX_rs` is the percentile rank score. In `Trial1`, note that subjects 2 and 3 both have time = 60, meaning they did not finish. This is treated as tied for last (and thus have percentile rank 2.5/3.0). 
+
+This is calculated for each trial. Then, for each subject we calculate the average percentile rank score. This gives 
+us the average percentile ranking for each subject. We can then use this as the response for any standard analysis method (i.e. t-test, linear regression, etc.). A very technical note is this does violate the assumption of independent observations, as rank scores are not independent; in fact they are correlated with $ \rho = -1/(k-1) $, where $k$ is the number of subjects. However, in practice this has very little effect on the type I error if ignored for reasonably sized groups (i.e. n = 10 per group). 
