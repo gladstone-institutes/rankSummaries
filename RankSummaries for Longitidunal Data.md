@@ -37,3 +37,10 @@ non-linear mixed effects models, and Cox-PH mixed effects models. While these me
 As such, our motivation was to create simple, valid, robust statistical methods for Morris Water Maze Data analyses. 
 
 ##What is a Rank Summary analysis?
+
+The concept that motivates the rank summary analysis is that in principle, we are asking a very simple 
+question: does one group perform better than the other at this particular test? We truth, we are *not* 
+interested in the actual values of the parameters that we may be estimating in the various other proposed 
+models. 
+
+With that in mind, we use a [derived variable analysis](https://faculty.washington.edu/heagerty/Courses/VA-longitudinal/private/LDAchapter.pdf) 
