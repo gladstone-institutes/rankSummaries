@@ -94,9 +94,9 @@ getMeanRankVals <- function(rankData, orderedRankNames, w = NULL){
 }
 
 
-plotConfIntervals <- function(fullData, orderedVarNames, grpName, 
+plotByTrial <- function(fullData, orderedVarNames, grpName, 
 							  cols = c('blue', 'red'), grpLvls = levels(factor(fullData[[grpName]])),
-							  useRanks = T, ylow = NULL, yhi = NULL, errorSummary = 'ci',
+							  useRanks = F, ylow = NULL, yhi = NULL, errorSummary = 'ci',
 							  useTrialNums = NULL, adj_x = 0.05,
 							  ...){
 	xLimits <- c(0.5, length(orderedVarNames) + 0.5)

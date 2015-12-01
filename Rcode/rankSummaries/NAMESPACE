@@ -1,4 +1,4 @@
 export(rankAnalysis)
 S3method(summary, rankAnalysisClass)
-export(plotConfIntervals)
+export(plotByTrial)
 export(adjustForCohort)
