@@ -11,7 +11,7 @@ progress, mice with impared memory should fare worse than standard mice. See the
 for more details.
 
 In general, these methods can be used for **structured** longitudinal analyses (i.e. fixed number of trials per subject),
-where we are interested in the overall performance at a given task. Other natural uses of the methods could T and Y-maze data. 
+where we are interested in the overall performance at a given task. Other natural uses of the methods could be for T- and Y-maze data. 
 
 ##Why use new methods?
 
