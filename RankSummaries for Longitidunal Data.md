@@ -60,3 +60,5 @@ us the average percentile ranking for each subject.
 We can then use this as the response for any standard analysis method (i.e. t-test, linear regression, etc.). A very technical note is this does violate the assumption of independent observations, as rank scores are not independent; in fact they are correlated with r = -1/(k-1) , where k is the number of subjects. However, in practice this has very little effect on the type I error if ignored for reasonably sized groups (i.e. n = 10 per group). 
 
 It is worth noting that this takes care of many of the issues above. First, the issue of non-constant variance is now fixed because the percentile ranks are used. Because we reduce all the scores down to a single score for analysis, we no longer need to worry about the potentially complex dependence structure. Censoring is also no longer a problem, as they are considered "tied for last". Since we are not comparing slopes, but just average overall performance, nonlinear effects are not as much as problem as with mixed effects models. 
+
+If these methods are used, please cite the [following manuscript](http://www.jci.org/articles/view/78464).  
