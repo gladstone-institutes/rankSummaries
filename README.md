@@ -6,7 +6,7 @@ To install directly from R, requires the devtools package. If devtools is not in
 <pre><code>
 install.packages('devtools')
 library(devtools)
-install_github('gladstone-institutes/rankSummaries/RCode/rankSummaries')  </code></pre>
+install_github('gladstone-institutes/rankSummaries/Rcode/rankSummaries')  </code></pre>
 
 For an explanation of the rankSummary methods, see "RankSummaries for Longitidunal Data.md".
 
